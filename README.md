@@ -87,9 +87,13 @@ The API documentation is available using Swagger UI. After starting the server, 
 ## Screenshots
 
 ![Screenshot 1](public/SS_1.png)
+
 ![Screenshot 2](public/SS_2.png)
+
 ![Screenshot 3](public/SS_3.png)
+
 ![Screenshot 4](public/SS_4.png)
+
 ![Screenshot 5](public/SS_5.png)
 
 ## Contributing
