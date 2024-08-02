@@ -35,7 +35,7 @@ app.use("/api-docs",
 app.get('/', (req, res) => {
   res.send(`
     <h1>Welcome to the Hospital API</h1>
-    <p>Click <a href="http://localhost:8000/api-docs/">here</a> to test the API with Swagger</p>
+    <p>Click <a href="https://hospital-api-qm11.onrender.com/api-docs/">here</a> to test the API with Swagger</p>
   `);
 })
 
