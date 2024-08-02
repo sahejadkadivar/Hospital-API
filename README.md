@@ -102,7 +102,7 @@ Feel free to contribute to this project by creating issues or submitting pull re
 The Hospital API is currently hosted on Render.
 
 link for trial is:
-[click here to experience it!](https://employee-review-system-nlcl.onrender.com)
+[click here to experience it!](https://hospital-api-qm11.onrender.com)
 
 ## Authors
 
