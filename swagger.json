@@ -7,7 +7,7 @@
     },
     "servers":[
         {
-            "https://hospital-api-qm11.onrender.com"
+            "url":"https://hospital-api-qm11.onrender.com"
         },
         {
             "url":"http://localhost:8000"
