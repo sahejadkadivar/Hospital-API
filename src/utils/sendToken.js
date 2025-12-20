@@ -12,6 +12,9 @@ export const sendToken = async (doctor, res, statusCode) => {
       ),
       httpOnly: true,  // Cookie is only accessible through HTTP requests, not JavaScript
     };
+    // Remove password from doctor object before sending response(major security measure)
+    const doctorObj = doctor.toObject ? doctor.toObject() : { ...doctor };
+     delete doctorObj.password;
 
     // Send response with status code, set the cookie, and include token and doctor information in the JSON response
     res
