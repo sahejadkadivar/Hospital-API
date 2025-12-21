@@ -14,6 +14,9 @@ export default class DoctorController {
 
         // Extract username and password from the request body
         const { username, password } = req.body;
+        // add validation check for username and password
+        if (!username || !password) return res.status(400).json({ message: "username and password required" });
+    
         try {
             // Check if a doctor with the given username already exists
             const existingDoctor = await this.doctorRepository.findDoctorByUSername(username);
@@ -23,6 +26,10 @@ export default class DoctorController {
             }
             // Register the new doctor with the provided data
             const doctor = await this.doctorRepository.registerDoctor(req.body);
+            // Remove password from doctor object before sending response(major security measure)
+            const doctorObj = doctor.toObject ? doctor.toObject() : { ...doctor };
+            delete doctorObj.password;
+
             // Send a success response with the registered doctor data
             res.status(201).json({ message: 'Doctor registerd successfully', doctor });
         } catch (error) {
@@ -35,6 +42,9 @@ export default class DoctorController {
     async login(req, res) {
         // Extract username and password from the request body
         const { username, password } = req.body;
+        // add validation check for username and password
+         if (!username || !password) return res.status(400).json({ message: "username and password required" });
+
         try {
             // Find a doctor by the given username
             const doctor = await this.doctorRepository.findDoctorByUSername(username);
